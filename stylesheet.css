@@ -1,34 +1,86 @@
 * {
     padding: 0;
     margin: 0;
+    overflow-x: hidden;
 }
 
 .background {
     display: grid;
     grid-template-columns: repeat(20, 5vw);
-    grid-template-rows: repeat(10, 5vw);
+    grid-template-rows: repeat(10, 5em);
     height: 100vh;
-    background-image: url("https://www.nasa.gov/sites/default/files/images/337294main_pg62_as11-40-5903_full.jpg");
+    width: 100vw;
+    background-image: url("http://histografy.pl/wp-content/uploads/2015/10/tereshkova.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 
 .overlay {
     /*! grid-row: 1/ span 10; */
     /*! grid-column: 1/ 21; */
-    opacity: 0.6;
-    background: linear-gradient(to right, rgb(252, 92, 125), rgb(106, 130, 251));
+    opacity: 0.5;
+    background: linear-gradient(to right, rgb(238, 9, 121), rgb(255, 106, 0));
     width: 100vw;
     height: 100vh;
 }
 
 .big-header-text {
     z-index: 1;
-    grid-row: 3/ span 2;
-    grid-column: 3/ span 2;
+    grid-row: 3/ span 4;
+    grid-column: 3/ span 6;
     font-size: 6em;
-    font-family: aktiv-grotesk, sans-serif;
+    font-family: Futura PT, sans-serif;
     font-weight: 400;
     font-style: normal;
     color: #f4f4f4;
+}
+
+.header-text {
+    z-index: 1;
+    font-family: Futura PT;
+    color: antiquewhite;
+    grid-column: 3/ span 8;
+    font-size: 3.5em;
+    grid-row: 7;
+}
+
+.body-text {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'IBM Plex Serif', serif;
+    color: #424242;
+}
+
+.block {
+    width: 75%;
+    margin: 40px auto;
+    text-align: left;
+}
+
+.block q {
+    font-size: 2.5em;
+    text-align: right;
+}
+
+.block p {
+    font-size: 1.7em;
+    text-align: right;
+}
+
+.text {
+    width: 45%;
+    margin: 40px auto 20px;
+    line-height: 2;
+    letter-spacing: 1px;
+}
+
+.dropcap-letter {
+    
+    font-size: 400%;
+    float: left;
+    line-height: 1em;
+    overflow: hidden;
+    color: #e74c3c;
 }
